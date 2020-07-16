@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'images',
+    'files',
 ]
 
 CORS_ORIGIN_WHITELIST = [

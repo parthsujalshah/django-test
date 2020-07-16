@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Images = props => {
+const Files = props => {
 
     const [title, setTitle] = useState("");
     const [cover, setCover] = useState();
@@ -12,9 +12,9 @@ const Images = props => {
 
         const uploadData = new FormData();
         uploadData.append('title', title);
-        uploadData.append('cover', cover, cover.name);
+        uploadData.append('file', cover, cover.name);
 
-        fetch('http://127.0.0.1:8000/api/books/books/', {
+        fetch('http://127.0.0.1:8000/api/files/files/', {
             method: 'POST',
             body: uploadData
         })
@@ -24,7 +24,7 @@ const Images = props => {
 
     return (
         <div>
-            <h3>Upload Images with react</h3>
+            <h3>Upload Files with react</h3>
             <label>
                 Title
             <input type="text" value={title} onChange={event => setTitle(event.target.value)} />
@@ -41,4 +41,4 @@ const Images = props => {
     );
 };
 
-export default Images;
+export default Files;
