@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 
     'images',
     'files',
+    'alexa',
+    'apivews',
 ]
 
 CORS_ORIGIN_WHITELIST = [

@@ -22,4 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/books/', include('images.api.urls')),
     path('api/files/', include('files.api.urls')),
+    path('api/apiviews/', include('apivews.api.urls')),
+    path('alexa/', include('alexa.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
